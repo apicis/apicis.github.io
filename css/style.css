@@ -63,6 +63,11 @@ a.icon {
    margin-left: 5%;
 }
 
+div.about {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 footer {
     text-align: center;
     margin-top: 70px;
