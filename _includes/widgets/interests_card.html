@@ -1,0 +1,14 @@
+{% if site.data.profile.interests %}
+<div class="mx-2 my-1">
+    <h6 class="border-bottom border-gray pb-2 mb-2">Research interests</h6>
+    <ul class="list-unstyled mb-1 interests">
+        {% for item in site.data.profile.interests %}
+        <li class="interestsmedia mb-1">
+            <div class="media-body">
+                <div> {{ item.name }} </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
