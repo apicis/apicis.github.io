@@ -1,6 +1,6 @@
 ---
 title:          "Segmenting Object Affordances: Reproducibility and Sensitivity to Scale"
-selected:       true
+selected:       false
 pub:            "European Conference on Computer Vision Workshops (ECCVW)"
 pub_date:       "2024"
 abstract: >-

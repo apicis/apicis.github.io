@@ -11,11 +11,11 @@
         <div class="col-md-8 col-xl-9 p-3 pl-md-0">
             <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
             <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-            <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+            <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }}, {{ item.pub_date }} {{ item.pub_last }}</p>
             {% if item.abstract %}
             <details class="mt-1 mb-0 small text-muted">
                 <summary style="cursor:pointer;">Abstract</summary>
-                <p class="mt-1 mb-0">{{ item.abstract }}</p>
+                <p class="mt-1 mb-0" style="text-align: justify;">{{ item.abstract }}</p>
             </details>
             {% endif %}
             
@@ -40,11 +40,11 @@
             <div>
                 <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
                 <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-                <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+                <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }}, {{ item.pub_date }} {{ item.pub_last }}</p>
                 {% if item.abstract %}
                 <details class="mt-1 mb-0 small text-muted">
                     <summary style="cursor:pointer;">Abstract</summary>
-                    <p class="mt-1 mb-0">{{ item.abstract }}</p>
+                    <p class="mt-1 mb-0" style="text-align: justify;">{{ item.abstract }}</p>
                 </details>
                 {% endif %}
                 

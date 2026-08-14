@@ -1,6 +1,6 @@
 ---
 title:          "Embodied Image Captioning: Self-supervised Learning Agents for Spatially Coherent Image Descriptions"
-selected:       true
+selected:       false
 pub:            "International Conference on Computer Vision (ICCV)"
 pub_date:       "2025"
 abstract: >-

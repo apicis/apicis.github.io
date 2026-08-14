@@ -1,5 +1,5 @@
 ---
-title:          "Affordance segmentation of hand-occluded containers from exocentric images"
+title:          "Container Localisation and Mass Estimation with an RGB-D Camera"
 selected:       false
 pub:            "International Conference on Acoustics, Speech, and Signal Processing​ (ICASSP)"
 pub_date:       "2022"
