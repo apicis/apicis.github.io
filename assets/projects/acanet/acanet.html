@@ -22,7 +22,6 @@
 <body>
 <div>
     <h1>Affordance segmentation of hand-occluded containers from exocentric images</strong></h1>
-    <!--<h3><em>International Conference on Computer Vision Workshops, 2023</em></h3>-->
     <h3>T. Apicella<sup>1,2</sup>, A. Xompero<sup>2</sup>, E. Ragusa<sup>1</sup>, R. Berta<sup>1</sup>,
         A. Cavallaro<sup>2,3,4</sup>, P. Gastaldo<sup>1</sup> <br/>
         <sup>1</sup>UniGe, <sup>2</sup>QMUL, <sup>3</sup>Idiap, <sup>4</sup>EPFL</h3>
@@ -30,7 +29,7 @@
 </div>
 <div class="links">
     <a href="https://openaccess.thecvf.com/content/ICCV2023W/ACVR/papers/Apicella_Affordance_Segmentation_of_Hand-Occluded_Containers_from_Exocentric_Images_ICCVW_2023_paper.pdf" class="icon_publication"><i class="fa fa-file-pdf-o" style="font-size:20px;"> Paper</i></a>
-    <a href="https://arxiv.org/abs/2308.11233" class="icon_publication"><i class="ai ai-arxiv ai-3x"
+    <a href="https://doi.org/10.48550/arXiv.2308.11233" class="icon_publication"><i class="ai ai-arxiv ai-3x"
                                                                            style="font-size:20px;"> arXiv</i></a>
     <a href="https://github.com/SEAlab-unige/acanet" class="icon_publication"><i class="fa fa-github"
                                                                                  style="font-size:20px;"> Code</i></a>
@@ -47,23 +46,8 @@
     <br>
 </div>
 
-<!--<h2>Abstract</h2>-->
 <figure>
-    <img src="../images/iccvw_2023.png" alt="ACANet model">
-    <!--<figcaption>ACANet block diagram </br>
-        --<table>
-            <tr>
-                <th>Affordance branch output legend:&nbsp;&nbsp;</th>
-                <th class="black">&nbsp;&nbsp;</th>
-                <th><em>background,&nbsp;&nbsp;</em></th>
-                <th class="red">&nbsp;&nbsp;</th>
-                <th><em>graspable,&nbsp;&nbsp;</em></th>
-                <th class="green">&nbsp;&nbsp;</th>
-                <th><em>contain,&nbsp;&nbsp;</em></th>
-                <th class="white">&nbsp;&nbsp;</th>
-                <th><em>arm</em></th>
-            </tr>
-        </table> -->
+    <img src="../../images/covers/iccvw_2023.png" alt="ACANet model">
     </figcaption>
 </figure>
 
@@ -78,7 +62,7 @@
         of hand-held containers in third-person (exocentric) images. Experiments on both real and mixed-reality show
         that our model achieves better affordance segmentation and generalisation than existing models.</p>
 </div>
-<!--<h2>Arm-Container Affordance Network (ACANet)</h2>-->
+
 <div class="text">
     <p> We name our proposed model Arm-Container Affordance Network (ACANet) as we consider containers for food and
         drinks, and <em>graspable</em> and <em>contain</em> as affordance classes. Assuming as input the image with at
@@ -96,71 +80,6 @@
         m<sub>o</sub> and m<sub>h</sub>, i.e., features outside of the predicted object (or arm)
         region are highly penalised. </p>
 </div>
-
-<!--<h2>Mixed-reality dataset</h2>
-<div class="text">
-    <p>Training ACANet requires a large dataset with (exocentric) images of hand-occluded objects and annotated with
-        segmentation masks of both arm, object, and affordances. Such a dataset was not available, and collecting and
-        manually annotating a new dataset is challenging, expensive, and time-consuming. We complement <a
-                href="https://zenodo.org/record/7622793">CORSMAL Hand-Occluded Containers (CHOC)</a>, which has
-        mixed-reality images of hand-occluded container for object pose estimation, with visual affordance annotations
-        (see Fig. 2).
-        Using mixed-reality datasets can easily scale the generation of a larger number of images under different
-        realistic backgrounds.</p>
-</div>
-<figure>
-    <img src="./images/choc-aff.png" alt="CHOC-AFF">
-    <figcaption>Fig.2: Samples of cropped RGB images and segmentation maps of arms and object affordances from the
-        mixed-reality dataset.
-        <br/>
-        <table>
-            <tr>
-                <th>Legend:&nbsp;&nbsp;</th>
-                <th class="black">&nbsp;&nbsp;</th>
-                <th><em>background,&nbsp;&nbsp;</em></th>
-                <th class="red">&nbsp;&nbsp;</th>
-                <th><em>graspable,&nbsp;&nbsp;</em></th>
-                <th class="green">&nbsp;&nbsp;</th>
-                <th><em>contain,&nbsp;&nbsp;</em></th>
-                <th class="white">&nbsp;&nbsp;</th>
-                <th><em>arm</em></th>
-            </tr>
-        </table>
-    </figcaption>
-</figure>
-
-<h2>Real data test set</h2>
-<div class="text">
-    <p>To validate the models in real conditions, we form a benchmarking test set of 300 images, evenly selected from
-        two
-        existing public datasets for hand-object pose estimation or reconstruction: <a
-                href="https://www.tugraz.at/index.php?id=40231">HOnnotate 3D (HO-3D)</a> and <a
-                href="https://corsmal.eecs.qmul.ac.uk/containers_manip.html">CORSMAL Containers Manipulation (CCM)</a>
-        (see
-        Fig.3). This set includes various challenges, such as presence of the human body, real interactions, and
-        different
-        object instances and hand-object poses.</p>
-</div>
-<figure>
-    <img src="./images/real_data.png" alt="CCM_HO3D">
-    <figcaption>Fig.3: Samples of cropped RGB images and segmentation maps of arms and object affordances from the
-        real data test set.
-        <br/>
-        <table>
-            <tr>
-                <th>Legend:&nbsp;&nbsp;</th>
-                <th class="black">&nbsp;&nbsp;</th>
-                <th><em>background,&nbsp;&nbsp;</em></th>
-                <th class="red">&nbsp;&nbsp;</th>
-                <th><em>graspable,&nbsp;&nbsp;</em></th>
-                <th class="green">&nbsp;&nbsp;</th>
-                <th><em>contain,&nbsp;&nbsp;</em></th>
-                <th class="white">&nbsp;&nbsp;</th>
-                <th><em>arm</em></th>
-            </tr>
-        </table>
-    </figcaption>
-</figure>-->
 
 <h2 class="section">Data for reproducibility</h2>
 <div class="text">
@@ -217,20 +136,10 @@
 
 <h2 class="section">Contact</h2>
 <div class="text">
-    If you have any further enquiries, question, or comments, please contact <a
-        href="mailto:tommaso.apicella@edu.unige.it">tommaso.apicella@edu.unige.it</a>
+     If you have any further enquiries, question, or comments, please open an issue on the Github repository page.
     <br>
     <br>
 </div>
 
-<!--<footer>
-    <div class="links">
-        <a href="..." class="icon_publication"><i class="fa fa-file-pdf-o" style="font-size:20px;"> Paper</i></a>
-        <a href="..." class="icon_publication"><i class="ai ai-arxiv ai-3x" style="font-size:20px;"> arXiv</i></a>
-        <a href="..." class="icon_publication"><i class="fa fa-github" style="font-size:20px;"> Code</i></a>
-        <a href="..." class="icon_publication"><i class="ai ai-zenodo" style="font-size:20px;"> Models</i></a>
-        <a href="..." class="icon_publication"><i class="ai ai-zenodo" style="font-size:20px;"> Dataset</i></a>
-    </div>
-</footer>-->
 </body>
 </html>
