@@ -1,0 +1,55 @@
+primary_name: "Tommaso Apicella"
+secondary_name: ""
+navbar_name: "Tommaso Apicella"
+
+positions:
+- name: Research Engineer
+- name: Generative Bionics
+
+# email: 
+gscholar: ITgSL4sAAAAJ  
+github: apicis
+linkedin: tommaso-apicella
+orcid: 0000-0001-9001-5641
+
+short_bio_text_justify: true
+short_bio: >-
+  <p>
+    I am currently a Research Engineer at <a href="https://gbionics.ai/">Generative Bionics</a>, where I work on 
+    the design and development of physical AI models for locomanipulation.
+  </p>
+
+  <p>
+  Before joining Generative Bionics, I was a PostDoc in the <a href="https://pavis.iit.it/">PAVIS </a> group at the Istituto Italiano di Tecnologia (IIT).
+  The main focus of my research activity is the design of computer vision models enabling robots to explore and interact with objects
+  or people in the environment.
+  </p>
+
+  <p>
+  I obtained my PhD in Interactive and Cognitive Environments, a joint Doctorate between University of Genoa
+  and Queen Mary University of London. The main topic of my PhD research was Affordance Segmentation that identifies the
+  surfaces of potential interaction between an agent (e.g. a robotic hand) and an object relying only on visual information.
+  The exciting and fascinating aspect of Affordance Segmentation is the connection to robotic and prosthetic applications,
+  enabling assistive technologies (e.g., grasping, object manipulation) or collaborative human-robot scenarios.
+  </p>
+
+interests:
+- name0: Physical AI
+- name1: Affordance
+- name: Embodied AI
+- name: Computer Vision
+- name: Machine Learning
+- name: Multimodal fusion
+- name: Affordance prediction
+- name: Reproducibility
+
+portrait_url: /assets/images/photos/portrait.jpg
+portrait_caption: >-
+
+experience:
+- name: Generative Bionics
+  position: Research Engineer
+  date: Jan. 2026 - Present
+- name: Istituto Italiano di Tecnologia
+  position: Postdoctoral Researcher
+  date: July 2024 - Dec. 2025

@@ -1,278 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tommaso Apicella's Personal Website</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/academicons.css">
-    <link rel="stylesheet" href="./css/academicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+---
+layout: default
+title : Homepage
+navbar_title: Home
+---
 
-<body>
-<header>
-    <div class="contacts">
-        <a href="https://linkedin.com/in/tommaso-apicella" class="icon" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"
-                                                                           style="font-size:36px"></i></a>
-        <a href="https://github.com/apicis" class="icon" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" style="font-size:36px;"></i></a>
-        <a href="https://scholar.google.com/citations?user=ITgSL4sAAAAJ&hl=it&oi=ao" class="icon" target="_blank" rel="noopener noreferrer"><i
-                class="ai ai-google-scholar-square ai-3x" style="font-size:36px;"></i></a>
+<div class="row">
+    <div class="col-lg-3 col-md-4">
+        {% include widgets/profile_card_mini.html %}
     </div>
-</header>
-<main>
-    <section id="home">
-        <h1> About me </h1>
-        <div class="about">
-            I am a PostDoc in the <a href="https://pavis.iit.it/">PAVIS </a> group at the Istituto Italiano di Tecnologia (IIT).
-            The main focus of my research activity is the design of computer vision models that enable robots to explore and interact with objects
-            or people in the environment.
-            <br>
-            <br>
-            Before joining IIT, I was a PhD student in Interactive and Cognitive Environments, a joint Doctorate between University of Genoa
-            and Queen Mary University of London. The main topic of my PhD research was Affordance Segmentation that identifies the
-            surfaces of potential interaction between an agent (e.g. a robotic hand) and an object relying only on visual information.
-            The exciting and fascinating aspect of Affordance Segmentation is the connection to robotic and prosthetic applications,
-            enabling assistive technologies (e.g., grasping, object manipulation) or collaborative human-robot scenarios.
+    <div class="col-lg-9 col-md-8">
+
+        {% include widgets/profile_card_bio_only.html %}
+
+        <!-- Debugging widgets -->
+        {% include widgets/debug_repo_name.html %}
+        {% include widgets/debug_url.html %}
+
+        {% if site.data.display.homepage.show_interests or site.data.display.homepage.show_experience %}
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div class="card-body px-4 pt-4 pb-2">
+                        <div class="row row-portrait-stack">
+                            {% if site.data.display.homepage.show_interests %}
+                            <div class="col-md-6">
+                                {% include widgets/interests_card.html %}
+                            </div>
+                            {% endif %}
+                            {% if site.data.display.homepage.show_experience %}
+                            <div class="col-md-6">
+                                {% include widgets/experience_card.html %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
-        <br>
-        <h1> Research interests </h1>
-        <div class="interests">
-            Embodied AI | Computer Vision | Machine Learning | Multimodal fusion | Affordance prediction
-        </div>
-        <br>
-        <br>
-    </section>
+        {% endif %}
 
-    <section id="services">
-        <h1> Reviewing service </h1>
-        <p>
-        <b>Awards</b>
-        <ul>
-        <li>Outstanding Reviewer, Computer Vision and Pattern Recognition (CVPR), 2026<br />
-            875 out of 17,491 reviewers (top 5%)<br />
-        <a href="https://x.com/CVPR/status/2056432751989940287">[link]</a></li>
-        <li>Outstanding Reviewer, British Machine Vision Conference (BMVC), 2024<br />
-            166 out of 860 reviewers (top 19%)<br />
-        <a href="https://bmvc2024.org/people/reviewers/">[link]</a></li>
-        </ul>
-        </p>
-
-        <p>
-        <b>Conferences</b>
-        <ul>     
-        <li>Computer Vision and Pattern Recognition (CVPR): 2025, 2026</li>
-        <li>European Conference on Computer Vision (ECCV): 2024 (helped reviewing 1 paper), 2026</li>
-        <li>Conference on Robot Learning (CoRL): 2025</li>
-        <li>British Machine Vision Conference (BMVC): 2024</li>
-        </ul>
-        </p>
-        <br>
-        <br>
-    </section>
-
-    <section id="publications">
-        <h1> Latest works </h1>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                    <img src='images/epos_vlm.png' width="320">
-                </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <strong>Memory-Augmented Vision-Language Agents for Persistent and Semantically Consistent Object Captioning</strong>
-                <br>
-                T. Galliena, S. Rosa, <b>T. Apicella</b>, P. Morerio, A. Del Bue, L. Natale
-                <br>
-                <em>Under review</em>, 2026
-                <br>
-                [<a href="https://doi.org/10.48550/arXiv.2603.24257">arXiv</a>]
-                [<a href="https://hsp-iit.github.io/epos-vlm">website</a>]
-            </td>
-                
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                    <img src='images/cvpr_2026.png' width="320">
-                </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <strong>Lifelong Imitation Learning with Multimodal Latent Replay and Incremental Adjustment</strong>
-                <br>
-                F. Yu, M. Tiezzi, <b>T. Apicella</b>, C. Beyan, V. Murino
-                <br>
-                <em>Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2026
-                <br>
-                [<a href="https://doi.org/10.48550/arXiv.2603.10929">arXiv</a>]
-            </td>
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                    <img src='images/affordance_venn.png' width="320">
-                </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <strong>Visual Affordance Prediction: Survey and Reproducibility</strong>
-                <br>
-                <b>T. Apicella</b>, A. Xompero, A. Cavallaro
-                <br>
-                <em>Under review</em>, 2025
-                <br>
-                [<a href="https://doi.org/10.48550/arXiv.2505.05074">arXiv</a>]
-                [<a href="https://apicis.github.io/aff-survey">website</a>]
-                [<a href="https://github.com/apicis/aff-survey">repository</a>]
-            </td>
-
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                    <img src='images/iccv_2025.png' width="320">
-                </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <strong>Embodied Image Captioning: Self-supervised Learning Agents for Spatially Coherent Image Descriptions</strong>
-                <br>
-                T. Galliena, <b>T. Apicella</b>, S. Rosa, P. Morerio, A. Del Bue, L. Natale
-                <br>
-                <em>International Conference on Computer Vision (ICCV)</em>, 2025
-                <br>
-                [<a href="https://doi.org/10.48550/arXiv.2504.08531">arXiv</a>]
-                [<a href="https://hsp-iit.github.io/embodied-captioning">website</a>]
-                [<a href="https://github.com/hsp-iit/embodied-captioning">code</a>]
-                [<a href="https://huggingface.co/datasets/TommyBsk/Embodied-Captioning">testing set</a>]
-            </td>
-
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                    <img src='images/eccvw_2024.png' width="320">
-                </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <strong>Segmenting Object Affordances: Reproducibility and Sensitivity to Scale</strong>
-                <br>
-                <b>T. Apicella</b>, A. Xompero, P. Gastaldo, A. Cavallaro
-                <br>
-                <em>European Conference on Computer Vision Workshops (ECCVW)</em>, 2024
-                <br>
-                [<a href="https://doi.org/10.48550/arXiv.2409.01814">arXiv</a>]
-                [<a href="https://apicis.github.io/aff-seg">website</a>]
-                [<a href="https://github.com/apicis/aff-seg">code</a>]
-                [<a href="https://doi.org/10.5281/zenodo.13627871">trained models</a>]
-            </td>
-            </tr>
-<!--
-            <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                    <img src='images/iccv2_2023.png' width="320">
-                </div>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <strong>Affordance segmentation of hand-occluded containers from exocentric images</strong>
-                <br>
-                <b>T. Apicella</b>, A. Xompero, E. Ragusa, R. Berta, A. Cavallaro, P. Gastaldo
-                <br>
-                <em>International Conference on Computer Vision Workshops (ICCVW)</em>, 2023
-                <br>
-                [<a href="https://doi.org/10.48550/arXiv.2308.11233">arXiv</a>]
-                [<a href="./projects/acanet.html">website</a>]
-                [<a href="https://github.com/SEAlab-unige/acanet">code</a>]
-                [<a href="https://doi.org/10.5281/zenodo.8364196">model</a>]
-                [<a href="https://doi.org/10.5281/zenodo.5085800">mixed-reality data</a>]
-                [<a href="https://doi.org/10.5281/zenodo.10708553">real testing data</a>]
-            </td>
-            </tr>
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/icassp_2022.png' width="320">
-                    </div>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                    <strong>Container Localisation and Mass Estimation with an RGB-D Camera</strong>
-                    <br>
-                    T. Apicella, G. Slavic, E. Ragusa, P. Gastaldo, L. Marcenaro
-                    <br>
-                    <em>International Conference on Acoustics, Speech, & Signal Processing (ICASSP)</em>, 2022
-                    <br>
-                    [<a href="https://ieeexplore.ieee.org/abstract/document/9747134" target="_blank" rel="noopener noreferrer">paper</a>]
-                    [<a href="https://arxiv.org/abs/2203.01207" target="_blank" rel="noopener noreferrer">arXiv</a>]
-                    [<a href="https://github.com/CORSMAL/Visual" target="_blank" rel="noopener noreferrer">code</a>]
-                </td>
-            </tr>
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/icecs_2021.png' width="320">
-                    </div>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                    <strong>An Affordance Detection Pipeline for Resource-Constrained Devices</strong>
-                    <br>
-                    T. Apicella, A. Cavallaro, R. Berta, P. Gastaldo, F. Bellotti, E. Ragusa
-                    <br>
-                    <em>International Conference on Electronics Circuits and Systems (ICECS)</em>, 2021
-                    <br>
-                    [<a href="https://ieeexplore.ieee.org/document/9665447" target="_blank" rel="noopener noreferrer">paper</a>]
-                    [<a href="https://github.com/SEAlab-unige/ICECS-2021" target="_blank" rel="noopener noreferrer">code</a>]
-                </td>
-            </tr>
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/cogn_comp_2021.jpg' width="320">
-                    </div>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                    <strong>Design and Deployment of an Image Polarity Detector with Visual Attention</strong>
-                    <br>
-                    E. Ragusa, T. Apicella, C. Gianoglio, R. Zunino, P. Gastaldo
-                    <br>
-                    <em>Cognitive Computation</em>, 2021
-                    <br>
-                    [<a href="https://link.springer.com/article/10.1007/s12559-021-09829-6" target="_blank" rel="noopener noreferrer">paper</a>]
-                    [<a href="https://github.com/SEAlab-unige/cogn-comp-2021" target="_blank" rel="noopener noreferrer">code</a>]
-                </td>
-            </tr>
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img src='images/sensors_2021.png' width="320">
-                    </div>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                    <strong>Emotion Recognition on Edge Devices: Training and Deployment</strong>
-                    <br>
-                    V. Pandelea, E. Ragusa, T. Apicella, P. Gastaldo, E. Cambria
-                    <br>
-                    <em>MDPI Sensors</em>, 2021
-                    <br>
-                    [<a href="https://www.mdpi.com/1424-8220/21/13/4496" target="_blank" rel="noopener noreferrer">paper</a>]
-                    [<a href="https://github.com/SEAlab-unige/Sensors-2021-Emotion" target="_blank" rel="noopener noreferrer">code</a>]
-                </td>
-            </tr>
-            <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                    <div class="one">
-                        <img width="320">
-                    </div>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:middle">
-                    <strong>Analyzing Machine Learning on Mainstream Microcontrollers</strong>
-                    <br>
-                    V. Falbo, T. Apicella, D. Aurioso, L. Danese, F. Bellotti, R. Berta, A. De Gloria
-                    <br>
-                    <em>ApplePies</em>, 2019
-                    <br>
-                    [<a href="https://link.springer.com/chapter/10.1007/978-3-030-37277-4_12" target="_blank" rel="noopener noreferrer">paper</a>]
-                </td>
-            </tr>-->
-            </tbody>
-        </table>
-    </section>
-</main>
-</body>
-</html>
+        {% if site.data.display.homepage.show_selected_publications %}
+        {% assign pubs = site.publications | sort: "order" | reverse | where: "selected", true %}
+        {%
+        include widgets/publication_card.html
+        publications=pubs
+        title='Latest works'
+        %}
+        {% endif %}
+    </div>
+</div>
