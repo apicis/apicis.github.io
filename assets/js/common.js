@@ -1,6 +1,6 @@
 // aHR0cHM6Ly9naXRodWIuY29tL2x1b3N0MjYvYWNhZGVtaWMtaG9tZXBhZ2U=
 $(function () {
-    lazyLoadOptions = {
+    const lazyLoadOptions = {
         scrollDirection: 'vertical',
         effect: 'fadeIn',
         effectTime: 300,
@@ -19,7 +19,7 @@ $(function () {
                 element.css('background-position', 'center');
             }
         }
-    }
+    };
 
     $('img.lazy, div.lazy:not(.always-load)').Lazy({visibleOnly: true, ...lazyLoadOptions});
     $('div.lazy.always-load').Lazy({visibleOnly: false, ...lazyLoadOptions});
