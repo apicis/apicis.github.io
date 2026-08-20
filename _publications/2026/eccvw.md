@@ -12,7 +12,7 @@ authors:
   - A. Xompero
   - A. Cavallaro
 links:
-  # arXiv:
+  arXiv: https://doi.org/10.48550/arXiv.2608.18317
   website: https://apicis.github.io/aff-sheet/
   # code: 
 ---
