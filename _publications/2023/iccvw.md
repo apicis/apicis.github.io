@@ -16,7 +16,7 @@ authors:
   - P. Gastaldo
 links:
   arXiv: https://doi.org/10.48550/arXiv.2308.11233
-  website: https://apicis.github.io/projects/acanet
+  website: https://apicis.github.io/projects/acanet.html
   code: https://github.com/SEAlab-unige/acanet
   trained model: https://doi.org/10.5281/zenodo.8364196
   mixed-reality data: https://doi.org/10.5281/zenodo.5085800 
