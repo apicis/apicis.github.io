@@ -1,6 +1,6 @@
 ---
 title:          "Lifelong Imitation Learning with Multimodal Latent Replay and Incremental Adjustment"
-selected:       true
+selected:       false
 pub:            "Conference on Computer Vision and Pattern Recognition (CVPR)"
 pub_date:       "2026"
 order:           2026-01

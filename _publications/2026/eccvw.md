@@ -14,5 +14,6 @@ authors:
 links:
   arXiv: https://doi.org/10.48550/arXiv.2608.18317
   website: https://apicis.github.io/aff-sheet/
-  # code: 
+  code: https://github.com/apicis/aff-sheet
+  sheet tool: https://apicis.github.io/aff-sheet/aff_sheet.html
 ---

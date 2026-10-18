@@ -1,9 +1,17 @@
 {% assign item = include.item %}
+{% assign is_empty_cover = false %}
+{% if item.cover contains 'empty_300x200.png' %}
+{% assign is_empty_cover = true %}
+{% endif %}
 <div class="d-none d-md-block">
     <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
         <div class="col-md-4 col-xl-3 mb-md-0 p-md-3">
             {%- if item.cover -%}
+            {% if is_empty_cover %}
+            <img src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="w-100 rounded-sm">
+            {% else %}
             <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+            {% endif %}
             {%- else -%}
             <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 640 480"></svg>
             {%- endif -%}
@@ -33,7 +41,7 @@
     </div>
 </div>
 
-<div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %} {% if item.cover %}lazy{% endif %}" data-src="{{ item.cover | relative_url }}">
+<div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if item.cover and is_empty_cover == false %}lazy{% endif %}" {% if item.cover and is_empty_cover == false %}data-src="{{ item.cover | relative_url }}"{% endif %}>
     <div class="w-100 {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %}" style="background-color: rgba(255,255,255,0.9);">
         <div class="d-flex align-items-start flex-column py-3 px-4">
             <div class="mb-auto"></div>
