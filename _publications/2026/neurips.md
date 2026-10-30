@@ -14,6 +14,6 @@ authors:
   - T. Apicella
   - V. Murino
 links:
-  # arXiv: 
+  arXiv: https://doi.org/10.48550/arXiv.2610.36374 
   code: https://github.com/yfqi/HIDRA 
 ---
